@@ -4,11 +4,9 @@ require 'json'
 
 module ExternalRequest
     module Request
-        class TimeError < StandardError; end
         class SocketError < StandardError; end
 
         def make_request(url)
-            binding.pry
             uri = URI(url)
 
             http = setup_request(url, uri)
@@ -18,7 +16,7 @@ module ExternalRequest
             begin
                 request = Net::HTTP::Get.new(uri)
 
-                # request.body = body.to_json if body
+                request.body = request.body.to_json if request.body
                 response = http.request(request)
 
                 case response
