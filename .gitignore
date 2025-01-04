@@ -32,3 +32,4 @@
 /config/master.key
 .env
 config/credentials/*.yml.enc
+config/credentials/*.yml.enc
