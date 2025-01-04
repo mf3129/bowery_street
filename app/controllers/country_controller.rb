@@ -1,7 +1,5 @@
 class CountryController < ApplicationController
     def current
-        Rails.logger.debug("Hit the Weather Controller")
-
         begin
             country_data_response = ::FetchCountryJob.perform_now(city)
 
