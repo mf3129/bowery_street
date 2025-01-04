@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
+  get 'weather/current/:city' => 'weather#current'
+  post 'weather/alert', to: 'weather#create_alert'
   # root "posts#index"
 end
