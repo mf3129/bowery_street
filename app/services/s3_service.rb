@@ -2,7 +2,7 @@ class S3Service
     attr_reader :s3, :bucket_name
 
     def initialize
-      @s3 = Aws::S3::Client.new
+      @s3 = Aws::S3::Client.new(region: Rails.application.credentials.dig(:aws, :region) || ENV['AWS_REGION'])
       @bucket_name = Rails.application.credentials.dig(:aws, :bucket_name) || ENV['S3_BUCKET_NAME']
     end
   

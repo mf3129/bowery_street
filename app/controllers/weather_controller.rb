@@ -9,6 +9,7 @@ class WeatherController < ApplicationController
             when 200
                 # files = S3Service.new.upload_file("/country_data_#{city}")
                 files = S3Service.new.write_to_s3(weather_data_response[:body])
+
                 puts files 
                 render json: weather_data_response, status: :ok
             when 404
