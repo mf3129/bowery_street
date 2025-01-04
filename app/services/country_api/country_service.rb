@@ -1,9 +1,9 @@
-module WeatherApi
-    class WeatherService
+module CountryApi
+    class CountryService
         extend ExternalRequest::Request
         # include Weather::WeatherSettings
 
-        def self.fetch_current_weather(city)
+        def self.fetch_current_city(city)
             make_request("https://restcountries.com/v3.1/capital/#{city}")
         end
 
