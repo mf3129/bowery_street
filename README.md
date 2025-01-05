@@ -22,7 +22,6 @@ Bowery Street is a Ruby on Rails backend setup designed to replicate an Event-Dr
 
 - Ruby 3.x
 - Rails 7.x
-- PostgreSQL (or your preferred database setup)
 - AWS S3, Lambda, SNS, SQS access (credentials required)
 
 ### Installation Steps
