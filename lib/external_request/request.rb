@@ -42,11 +42,5 @@ module ExternalRequest
 
             http
         end
-
-        def return_generated_links
-            normalized_countries = DEFAULT_COUNTRIES.each do |country|
-                country.to_s
-            end
-        end
     end
 end
