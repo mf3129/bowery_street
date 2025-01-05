@@ -44,8 +44,6 @@ class S3Service
       )
     end
 
-    private
-
     # Upload files to s3 bucket
     def upload_file(file_path, s3_key)
       s3.put_object(

@@ -7,7 +7,6 @@ class CountryController < ApplicationController
             when 200
                 files = S3Service.new.write_to_s3(country_data_response[:body])
 
-                puts files 
                 render json: country_data_response, status: :ok
             when 404
                 render json: { error: "Resource not found"}, status: :not_found
